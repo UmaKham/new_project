@@ -2,5 +2,102 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
+body{
+  background: #120929;
+  display: flex;
+}
+
+.container{
+  max-width: 100%;
+}
+
+.box{
+  border-radius: 8px 0px 0px 8px;
+  background: linear-gradient(0deg, rgba(28, 35, 64, 0.00) -5.79%, #1C0F54 114.59%);
+  box-shadow: 0px -5px 25px 0px rgba(0, 3, 32, 0.50);
+  width: 220px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.box .logo{
+  text-shadow: 0px 5px 12px rgba(6, 5, 19, 0.25);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-decoration: underline;
+  color: #3887FE;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+}
+
+.item{
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px;
+}
+
+.item a{
+  text-decoration: none;
+  color: #616A8B;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+footer{
+  border-top: 2px solid #1288E8;
+  width: 180px;
+  padding: 26px 0;
+  margin-top: 200px;
+}
+
+span{
+  color: #616A8B;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.active{
+  background-color: #32395E;
+  border-radius: 5px;
+  border-bottom: 2px solid #1288E8;
+}
+
+.active a{
+  color: white;
+}
+
+.polygon img{
+  width: 70px;
+  transform: rotate(10deg);
+  position: absolute;
+  top: 400px;
+  right: -20px;
+}
+
+.main_top_btn button{
+  background: url(./public/notify.svg);
+  
+  border: 2px solid white;
+  width: 40px;
+  height: 40px;
+}

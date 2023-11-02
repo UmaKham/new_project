@@ -1,15 +1,78 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Vite App</title>
   </head>
   <body>
 
+    <aside>
+      <div class="container">
+        <div class="box">
+          <div class="polygon">
+            <img src="./public/Polygon.svg" alt="">
+          </div>
+          <span class="logo">VALUET</span>
+
+          <nav>
+            <div class="item active">
+              <img src="./public/overview.svg" alt=""><a href="">Overview</a>
+            </div>
+
+            <div class="item">
+              <img src="./public/wallets.svg" alt="">
+              <a href="">Wallets</a>
+            </div>
+
+            <div class="item">
+              <img src="./public/transaction.svg" alt="">
+              <a href="">Transaction</a>
+            </div>
+
+            <div class="item">
+              <img src="./public/exchange.svg" alt="">
+              <a href="">Exchange</a>
+            </div>
+
+            <div class="item">
+              <img src="./public/market.svg" alt="">
+              <a href="">Market</a>
+            </div>
+
+            <footer>
+              <div class="item">
+                <img src="./public/user.svg" alt="">
+                <span>Mike Jackson</span>
+              </div>
+              <div class="item">
+                <img src="./public/logout.svg" alt="">
+                <a href="">Log out</a>
+              </div>
+            </footer>
+          </nav>
+        </div>
+      </div>
+    </aside>
     
-    
+    <main>
+      <div class="container">
+        <div class="main_top">
+          <input type="search">
+          <div class="main_top_btn">
+            <button class="btn_message">
+              <img src="./public/message.svg" alt="">
+            </button>
+            <button class="notify">
+              <img src="./public/notify.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
