@@ -7,7 +7,6 @@
 
 body{
   background: #120929;
-  display: flex;
 }
 
 .container{
@@ -17,14 +16,15 @@ body{
 .box{
   border-radius: 8px 0px 0px 8px;
   background: linear-gradient(0deg, rgba(28, 35, 64, 0.00) -5.79%, #1C0F54 114.59%);
-  box-shadow: 0px -5px 25px 0px rgba(0, 3, 32, 0.50);
-  width: 220px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  width: 300px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  position: absolute;
+  left: 0;
 }
 
 .box .logo{
@@ -94,10 +94,288 @@ span{
   right: -20px;
 }
 
+main{
+  padding: 0 30px 0 330px;
+}
+
+.main_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  border-bottom: 2px solid #2D317A;
+  margin: 0 20px;
+}
+
+.search_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_box input{
+  background-color: #161245;
+  width: 290px;
+  height: 30px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  color: white;
+}
+
+.search_box button{
+  background-color: #161245;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  width: 30px;
+  height: 30px;
+  padding: 4px 35px 0 0;
+}
+
+.main_top_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+}
+
 .main_top_btn button{
-  background: url(./public/notify.svg);
-  
-  border: 2px solid white;
-  width: 40px;
-  height: 40px;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+section .container{
+  padding: 20px;
+}
+
+.section_top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title_date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.title_date span{
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.title_date p{
+  color: #616A8B;
+  font-weight: bold;
+}
+
+.section_top button{
+  border-radius: 25px;
+  background: linear-gradient(272deg, #3887FE 4.26%, #3BA0FF 51.37%, #5FB2FF 99.01%);
+  box-shadow: 0px 2px 4px 0px rgba(85, 35, 221, 0.40);
+  border: none;
+  color: white;
+  padding: 6px 23px;
+}
+
+.card{
+  width: 226px;
+  height: 312px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgba(27, 18, 78, 0.20) 0%, #0F0B38 93.37%);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  padding: 16px 24px;
+}
+
+.title_card{
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.chart{
+  background: url(/public/balance_bg.png);
+  width: 146px;
+  height: 146px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 16px 24px 16px;
+}
+
+.chart span{
+  color: #1288E8;
+  font-size: 18px;
+}
+
+.chart p{
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.chart_item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.info_box{
+  padding-top: 27px;
+}
+
+.block_one{
+  display: flex;
+  gap: 19px;
+}
+
+select{
+  background: none;
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+
+.top_card_title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart_box span{
+  font-weight: 400;
+}
+
+.item_box{
+  width: 400px;
+  height: 148px;
+  border-radius: 5px;
+  background: linear-gradient(237deg, #604392 -8.06%, #0F0B38 96.63%);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  padding: 18px;
+}
+
+.btc_block{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.btc_block .img_box{
+  width: 64px;
+  height: 64px;
+  position: relative;
+}
+
+.img_box .circle{
+  position: absolute;
+  top: 5px;
+}
+
+.img_box .btc_logo{
+  position: absolute;
+  top: 32%;
+  left: 32%;
+}
+
+.btc_rate{
+  padding: 20px 0 0 70px;
+}
+
+.btc_rate span{
+  color: white;
+}
+
+.btc_rate p{
+  color: #616A8B;
+  padding-top: 4px;
+}
+
+.price_one{
+  font-size: 8px;
+  color: white;
+  display: flex;
+}
+
+.price_one span{
+  color: white;
+  font-weight: bold;
+}
+
+.price_one p{
+  color: white;
+  font-weight: 400;
+}
+
+.btc_price{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info_box{
+  display: flex;
+  gap: 16px;
+}
+
+.block_two{
+  display: flex;
+  gap: 16px;
+}
+
+#two{
+  border-radius: 5px;
+  background: linear-gradient(237deg, #D66168 -8.06%, #0F0B38 96.63%);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+}
+#three{
+  border-radius: 5px;
+  background: linear-gradient(237deg, #6162D6 -8.06%, #0F0B38 96.63%);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+}
+#four{
+  border-radius: 5px;
+  background: linear-gradient(237deg, #EB8338 -8.06%, #0F0B38 96.63%);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+}
+
+.item_box .title{
+  color: white;
+}
+.block_two{
+  display: flex;
+  flex-direction: column;
+}
+.one_two{
+  display: flex;
+  gap: 16px;
+}
+.three_four{
+  display: flex;
+  gap: 16px;
+}
+
+.grid_logo{
+  position: absolute;
+  top: 30%;
+  left: 26%;
+}
+.ethereum_logo{
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+.aethernity_logo{
+  position: absolute;
+  top: 43%;
+  left: 21%;
 }
