@@ -42,15 +42,22 @@ btns.forEach(btn => {
         .then(res => {
           if(res.status !== 200 && res.status !== 201) return
           if(res.data.length > 0) {
-            console.log('Account already taken');
+            let error_text = document.querySelector('.error_text')
+            let error_mod = document.querySelector('.error_block')
+            
+            error_text.innerHTML = 'E-mail already taken'
+            error_mod.style.display = 'flex'
+
+            let email_input = document.querySelector('.email')
+            email_input.value = 'focus'
             return
           }
           axios.post('http://localhost:8080/users', user)
             .then(res => {
               if(res.status == 200 || res.status == 201) {
                 
-                form_signIn_btn.style.display = 'flex'
-                form_signUp_btn.style.display = 'none'
+                form_signIn.style.display = 'flex'
+                form_signUp.style.display = 'none'
               }
             })
         })
