@@ -21,12 +21,12 @@
           <div class="email">
             <img class="email_icon" src="/public/Ellipse.svg"></img>
             <img class="email_icon" src="/public/login_icon.svg"></img>
-            <input type="email" placeholder="E-mail or Login" autocomplete="off">
+            <input name="email" type="email" placeholder="E-mail or Login" autocomplete="off">
           </div>
           
           <div class="password">
             <img class="password_icon" src="/public/password_icon.svg"></img>
-            <input type="password">
+            <input name="password" type="password">
           </div>
 
           <div class="signIn_btn_box">
@@ -35,17 +35,25 @@
           </div>
 
         </form>
+
+
+
         <form class="signUp" name="signUp">
-          <input type="text" class="name" placeholder="Name">
-          <input type="text" class="firstName" placeholder="Firstname">
-          <input type="email" class="email" placeholder="E-mail">
-          <input type="password" class="password" placeholder="Password">
-          <div class="reg_btn">
-            <button>Register</button>
-            <button class="cancel">Cancel</button>
+          <input type="text" name="name" class="name" placeholder="Name">
+          <input type="text" name="surname" class="surname" placeholder="Surname">
+          <input type="email" name="email" class="email" placeholder="E-mail">
+          <input type="password" name="password" class="password" placeholder="Password">
+          <div class="reg_box_btn">
+            <button class="reg_btn">Register</button>
+            <button class="cancel_btn">Cancel</button>
           </div>
         </form>
         
+
+        <div class="error_block">
+          <p class="error_text">User not found</p>
+          <button class="error_btn">OK</button>
+        </div>
         <p>Forgot your password?</p>
       
       </div>
@@ -61,6 +69,6 @@
     <img class="bg_img" src="/public/bg_two.svg" alt="">
   </main>
 
-  <script src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
