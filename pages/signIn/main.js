@@ -1,4 +1,4 @@
-import axios from 'axios'
+import {getData, postData} from '../../modules/helpers'
 
 let form_signIn = document.forms.signIn
 let form_signUp = document.forms.signUp
@@ -37,8 +37,7 @@ btns.forEach(btn => {
       fm.forEach((value, key) => {
         user[key] = value
       })
-
-      axios.get('http://localhost:8080/users?email=' + user.email)
+      getData('/users?email=' + user.email)
         .then(res => {
           if(res.status !== 200 && res.status !== 201) return
           if(res.data.length > 0) {
@@ -52,7 +51,7 @@ btns.forEach(btn => {
             email_input.value = 'focus'
             return
           }
-          axios.post('http://localhost:8080/users', user)
+          postData('/users', user)
             .then(res => {
               if(res.status == 200 || res.status == 201) {
                 
@@ -80,8 +79,7 @@ btns.forEach(btn => {
       fm.forEach((value, key) => {
         user[key] = value
       })
-
-      axios.get('http://localhost:8080/users?email=' + user.email)
+      getData('/users?email=' + user.email)
         .then(res => {
           if(res.status !== 200 && res.status !== 201) return
           if(res.data.length === 0) {
@@ -94,6 +92,8 @@ btns.forEach(btn => {
           let [res_user] = res.data
 
           if(res_user.password == user.password) {
+            delete res_user.password
+            localStorage.setItem('user', JSON.stringify(res_user))
             location.assign('/')
           } else {
             error_text.innerHTML = 'invalid password'
