@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-let form_signIn_btn = document.querySelector('.signIn')
-let form_signUp_btn = document.querySelector('.signUp')
+let form_signIn = document.forms.signIn
+let form_signUp = document.forms.signUp
 
 let btns = document.querySelectorAll('button')
 
@@ -11,16 +11,16 @@ btns.forEach(btn => {
     btn.onclick = (e) => {
       e.preventDefault();
     
-      form_signIn_btn.style.display = 'none'
-      form_signUp_btn.style.display = 'flex'
+      form_signIn.style.display = 'none'
+      form_signUp.style.display = 'flex'
     }
   }
 
   if(btn.classList == 'cancel_btn') {
     btn.onclick = (e) => {
       e.preventDefault();
-      form_signIn_btn.style.display = 'flex'
-      form_signUp_btn.style.display = 'none'
+      form_signIn.style.display = 'flex'
+      form_signUp.style.display = 'none'
     }
   }
 
