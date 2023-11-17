@@ -66,9 +66,9 @@ main{
         font-family: sans-serif;
         font-size: 36px;
         font-weight: bold;
-        padding: 82px 0 62px 0;
+        padding: 40px 0;
       }
-      form{
+      .signIn{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -126,7 +126,7 @@ main{
             border-bottom: 2px solid #1288E8;
           }
         }
-        .btn{
+        .signIn_btn_box{
           display: flex;
           justify-content: center;
           gap: 32px;
@@ -142,10 +142,51 @@ main{
             font-weight: bold;
             cursor: pointer;
           }
-          .signIn{
+          .signIn_btn{
             border-radius: 8px;
             background: linear-gradient(272deg, #3887FE 4.26%, #3BA0FF 51.37%, #5FB2FF 99.01%);
             box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+            color: white;
+          }
+        }
+      }
+      .signUp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        display: none;
+        input{
+          width: 330px;
+          height: 58px;
+          border-radius: 8px;
+          background: #2E3558;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+          border: none;
+          font-size: 20px;
+          padding-left: 20px;
+          outline: none;
+        }
+        .reg_btn{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 32px;
+          margin-bottom: 20px;
+          button{
+            width: 105px;
+            height: 42px;
+            border-radius: 8px;
+            background: linear-gradient(272deg, #3887FE 4.26%, #3BA0FF 51.37%, #5FB2FF 99.01%);
+            box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          .cancel{
+            background: linear-gradient(272deg, #fe3838 4.26%, #ff3b3b 51.37%, #ff5f5f 99.01%);
             color: white;
           }
         }

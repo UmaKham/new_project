@@ -16,7 +16,7 @@
       <img class="blue_polygon" src="/public/blue_polygon.svg" alt="">
       <img class="blue_square" src="/public/blue_square.svg" alt="">
       <span>Welcome!</span>
-        <form name="signIn">
+        <form class="signIn" name="signIn">
 
           <div class="email">
             <img class="email_icon" src="/public/Ellipse.svg"></img>
@@ -29,11 +29,21 @@
             <input type="password">
           </div>
 
-          <div class="btn">
-            <button class="signUp">SIGN UP</button>
-            <button class="signIn">SIGN IN</button>
+          <div class="signIn_btn_box">
+            <button class="signUp_btn">SIGN UP</button>
+            <button class="signIn_btn">SIGN IN</button>
           </div>
 
+        </form>
+        <form class="signUp" name="signUp">
+          <input type="text" class="name" placeholder="Name">
+          <input type="text" class="firstName" placeholder="Firstname">
+          <input type="email" class="email" placeholder="E-mail">
+          <input type="password" class="password" placeholder="Password">
+          <div class="reg_btn">
+            <button>Register</button>
+            <button class="cancel">Cancel</button>
+          </div>
         </form>
         
         <p>Forgot your password?</p>
