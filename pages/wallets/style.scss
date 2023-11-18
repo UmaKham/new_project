@@ -151,7 +151,88 @@ body{
       }
     }
   }
-  section .container{
-    padding: 20px;
+  section{
+    .container{
+      padding: 20px;
+      .page_name{
+        color: white;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .grid_box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 240px;
+        gap: 20px;
+        .total_card{
+          border-radius: 5px;
+          background: linear-gradient(180deg, rgba(27, 18, 78, 0.20) 0%, #0F0B38 93.37%);
+          box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+          margin-top: 24px;
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+        .item_card{
+          border-radius: 5px;
+          position: relative;
+          margin-top: 24px;
+          overflow: hidden;
+          .card_name{
+            color: white;
+            font-weight: bold;
+            padding: 16px;
+          }
+          .card_info{
+            position: absolute;
+            top: 28px;
+            right: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            span{
+              color: white;
+              font-weight: bold;
+              font-size: 25px;
+            }
+          }
+          .bg_anim{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            z-index: -1;
+            background: linear-gradient(135deg, #a71327, #591BC5, #212335);
+            background-size: 400% 400%;
+            animation: Gradient 10s ease infinite;
+          }
+          @keyframes Gradient {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+        }
+        #card_one{
+          box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+          grid-column: 2/3;
+          grid-row: 1/2;
+        }
+        #card_two{
+          box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          grid-column: 3/4;
+          grid-row: 1/2;
+        }
+      }
+    }
   }
 }
