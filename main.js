@@ -1,101 +1,32 @@
-const chartData = {
-  labels: ["BitCoin", "Ethereum", "Dash"],
-  data: [64, 18, 18]
-}
+import {user} from './modules/user'
 
-const doughnutChart = document.getElementById('myChart');
+let user_name = document.querySelector('.user_name')
+let email_text = document.querySelector('.email_text')
 
-  new Chart(doughnutChart, {
-    type: 'doughnut',
-    data: {
-      labels: chartData.labels,
-      datasets: [
-        {
-          label: "Language Popularity",
-          data: chartData.data
-        }
-      ] 
-    },
-    options: {
-      borderWidth: false,
-      hoverBorderWidth: 2,
-      backgroundColor: ["#010155", "#642999", "#912491"],
-      rotation: 200,
-      cutout: 55,
-      plugins: {
-        legend: {
-          display: false,
-        }
-      }
+user_name.innerHTML = `${user.name} ${user.surname}`
+email_text.innerHTML = user.email
+
+let btns = document.querySelectorAll('button')
+
+btns.forEach(btn => {
+  btn.onclick = (e) => {
+    if(btn.classList == 'log_out') {
+      e.preventDefault();
+      
+      let black_bg = document.querySelector('.black_bg')
+      black_bg.style.display = 'flex'
     }
-  });
-
-  const lineChart = document.getElementById('lineChart');
-  new Chart(lineChart, {
-    type: "line",
-    data: {
-      labels: chartData.labels,
-      datasets: [
-        {
-          label: "Language Popularity",
-          data: chartData.data
-        }
-      ] 
-    },
-    options: {
-      borderWidth: false,
-      hoverBorderWidth: 2,
-      borderWidth: 1,
-      borderColor: "grey",
-      pointBorderColor: "white",
-      pointRadius: 5,
-      backgroundColor: ["#010155", "#642999", "#912491"],
-      rotation: 200,
-      plugins: {
-        legend: {
-          display: false,
-        }
-      }
+    if(btn.classList == 'no') {
+      e.preventDefault();
+      
+      let black_bg = document.querySelector('.black_bg')
+      black_bg.style.display = 'none'
     }
-  });
-  
-  const transactionChart = document.getElementById('transactionChart');
-  new Chart(transactionChart, {
-    type: "line",
-    data: {
-      labels: chartData.labels,
-      datasets: [
-        {
-          label: "Language Popularity",
-          data: chartData.data
-        }
-      ] 
-    },
-    options: {
-      borderWidth: false,
-      hoverBorderWidth: 2,
-      borderWidth: 1,
-      borderColor: "grey",
-      pointBorderColor: "white",
-      pointRadius: 5,
-      backgroundColor: ["#010155", "#642999", "#912491"],
-      rotation: 200,
-      plugins: {
-        legend: {
-          display: false,
-        }
-      }
+    if(btn.classList == 'yes') {
+      e.preventDefault();
+
+      localStorage.removeItem('user')
+      location.assign('/pages/signIn')
     }
-  });
-
-  let ul = document.querySelector('.card ul')
-
-  function balancePercent() {
-    chartData.labels.forEach((el, i) => {
-      let li = document.createElement('li');
-      li.innerHTML = `${el}: <span>${chartData.data[i]}%</span>`;
-      ul.appendChild(li)
-    })
   }
-
-  balancePercent();
+})

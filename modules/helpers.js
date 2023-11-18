@@ -22,3 +22,14 @@ export async function postData(resource, body) {
     return null
   }
 }
+
+export async function editData(resource, body) {
+  try{
+    const res = await axios.patch(base_url + resource, body)
+  
+    return res
+  } catch(e) {
+    console.log(e);
+    return null
+  }
+}
