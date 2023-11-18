@@ -8,6 +8,14 @@
       "id": 1
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "name": "",
+      "currency": "RUB",
+      "balance": "",
+      "email": "Umakham@gmail.com",
+      "id": 1
+    }
+  ],
   "transactions": []
 }
