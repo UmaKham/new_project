@@ -176,78 +176,131 @@ body{
         margin-left: 20px;
         cursor: pointer;
       }
-      .grid_box{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 240px;
+      .contain{
+        display: flex;
         gap: 20px;
-        overflow-x: hide;
-        .total_card{
+        .card_details{
+          width: calc(100% - 410px);
+          height: 550px;
           border-radius: 5px;
           background: linear-gradient(180deg, rgba(27, 18, 78, 0.20) 0%, #0F0B38 93.37%);
           box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
           margin-top: 24px;
-          grid-column: 1/2;
-          grid-row: 1/2;
-        }
-        .item_card{
-          border-radius: 5px;
-          position: relative;
-          margin-top: 24px;
-          overflow: hidden;
-          .card_name{
-            color: white;
-            font-weight: bold;
-            padding: 16px;
-          }
-          .card_info{
-            position: absolute;
-            top: 28px;
-            right: 40px;
+          padding: 20px;
+          .balance_details{
+            background-color: #591bc57a;
+            width: calc(50% - 10px);
+            height: calc(50% - 20px);
+            border-radius: 8px;
+            box-shadow: 0 0 15px #0F0B38;
+            padding: 20px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             gap: 10px;
             span{
+              font-size: 20px;
+              color: white;
+            }
+          }
+        }
+        .card_box{
+          display: grid;
+          width: 400px;
+          height: 570px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          overflow-y: scroll;
+          .item_card{
+            border-radius: 5px;
+            position: relative;
+            margin-top: 24px;
+            overflow: hidden;
+            cursor: pointer;
+            .card_name{
               color: white;
               font-weight: bold;
-              font-size: 25px;
+              padding: 16px;
+            }
+            .card_info{
+              position: absolute;
+              top: 50px;
+              left: 20px;
+              gap: 10px;
+              display: flex;
+              align-items: center;
+              .balance{
+                color: white;
+                font-weight: bold;
+                font-size: 40px;
+              }
+              .currency{
+                color: white;
+              }
+            }
+            .bg_anim{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 50%;
+              left: 50%;
+              translate: -50% -50%;
+              z-index: -1;
+              background: linear-gradient(135deg, #2713a7, #591BC5, #212335);
+              background-size: 400% 400%;
+              animation: Gradient 10s ease infinite;
+            }
+            @keyframes Gradient {
+              0% {
+                background-position: 0% 50%;
+              }
+              50% {
+                background-position: 100% 50%;
+              }
+              100% {
+                background-position: 0% 50%;
+              }
             }
           }
-          .bg_anim{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            z-index: -1;
-            background: linear-gradient(135deg, #a71327, #591BC5, #212335);
-            background-size: 400% 400%;
-            animation: Gradient 10s ease infinite;
+          #one{
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+            grid-column: 1/3;
+            grid-row: 1/3;
           }
-          @keyframes Gradient {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
+          #two{
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            grid-column: 1/2;
+            grid-row: 3/4;
+          }
+          #three{
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            grid-column: 2/3;
+            grid-row: 3/4;
+          }
+          #four{
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            grid-column: 1/2;
+            grid-row: 4/5;
+          }
+          #five{
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            grid-column: 2/3;
+            grid-row: 4/5;
           }
         }
-        #card_one{
-          box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
-          grid-column: 2/3;
-          grid-row: 1/2;
+        ::-webkit-scrollbar {
+          width: 10px;
+          margin: 0 10px;               /* ширина scrollbar */
         }
-        #card_two{
-          box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
-          border-radius: 5px;
-          grid-column: 3/4;
-          grid-row: 1/2;
+        ::-webkit-scrollbar-track {
+          background: #120929;        /* цвет дорожки */
+        }
+        ::-webkit-scrollbar-thumb {
+          background-color: #161245;    /* цвет плашки */
+          border-radius: 20px;       /* закругления плашки */
         }
       }
     }
