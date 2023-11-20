@@ -1,177 +1,183 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.scss">
-  <script async src="/modules/guardian.js"></script>
-  <title>Wallets</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.scss">
+    <script async src="/modules/guardian.js"></script>
+    <title>Wallets</title>
 </head>
+
 <body>
-  <aside>
-    <div class="container">
-      <div class="box">
-        <div class="polygon">
-          <img src="/public/Polygon.svg" alt="">
+    <aside>
+        <div class="container">
+            <div class="box">
+                <div class="polygon">
+                    <img src="/public/Polygon.svg" alt="">
+                </div>
+                <span class="logo">VALUET</span>
+
+                <nav>
+                    <div class="item">
+                        <img src="/public/overview.svg" alt="">
+                        <a href="/">Overview</a>
+                    </div>
+
+                    <div class="item">
+                        <img src="/public/wallets.svg" alt="">
+                        <a href="/pages/wallets/">Wallets</a>
+                    </div>
+
+                    <div class="item">
+                        <img src="/public/transaction.svg" alt="">
+                        <a href="/pages/transaction/">Transaction</a>
+                    </div>
+
+                    <div class="item">
+                        <img src="/public/exchange.svg" alt="">
+                        <a href="/pages/exchange/">Exchange</a>
+                    </div>
+
+                    <div class="item">
+                        <img src="/public/market.svg" alt="">
+                        <a href="/pages/market/">Market</a>
+                    </div>
+                </nav>
+                <footer>
+                    <div class="item">
+                        <img src="/public/user.svg" alt="">
+                        <span class="user_name">Mike Jackson</span>
+                    </div>
+                    <div class="item">
+                        <img src="/public/logout.svg" alt="">
+                        <button class="log_out">Log out</button>
+                    </div>
+                </footer>
+            </div>
         </div>
-        <span class="logo">VALUET</span>
-  
-        <nav>
-          <div class="item">
-            <img src="/public/overview.svg" alt="">
-            <a href="/">Overview</a>
-          </div>
-  
-          <div class="item">
-            <img src="/public/wallets.svg" alt="">
-            <a href="/pages/wallets/">Wallets</a>
-          </div>
-  
-          <div class="item">
-            <img src="/public/transaction.svg" alt="">
-            <a href="/pages/transaction/">Transaction</a>
-          </div>
-  
-          <div class="item">
-            <img src="/public/exchange.svg" alt="">
-            <a href="/pages/exchange/">Exchange</a>
-          </div>
-  
-          <div class="item">
-            <img src="/public/market.svg" alt="">
-            <a href="/pages/market/">Market</a>
-          </div>
-        </nav>
-        <footer>
-          <div class="item">
-            <img src="/public/user.svg" alt="">
-            <span class="user_name">Mike Jackson</span>
-          </div>
-          <div class="item">
-            <img src="/public/logout.svg" alt="">
-            <button class="log_out">Log out</button>
-          </div>
-        </footer>
-      </div>
-    </div>
-  </aside>
-  
-  <main>
-  <div class="container">
-    <div class="main_top">
-      <div class="search_box">
-        <input type="search">
-        <button><img src="/public/search.png" alt=""></button>
-      </div>
-      <div class="main_top_btn">
-        <span class="email_text"></span>
-        <button class="btn_message">
-          <img src="/public/message.png" width="30" alt="">
-        </button>
-        <button class="notify">
-          <img src="/public/notify.png" width="30" alt="">
-        </button>
-      </div>
-    </div>
-  </div>
-  
-  <section>
-    <div class="container">
-      <span class="page_name">Wallets</span>
-      <button class="add_wallet">+ Add Wallet</button>
-      <div class="contain">
-        <div class="card_details">
+    </aside>
 
-          <div class="balance_details">
-            <span>Card name: UzCard</span>
-            <span>Balance: 10000</span>
-            <span>Currency: SUM</span>
-            <canvas id="myChart"></canvas>
-          </div>
-
-          <div class="card_transaction">
-
-          </div>
+    <main>
+        <div class="container">
+            <div class="main_top">
+                <div class="search_box">
+                    <input type="search">
+                    <button><img src="/public/search.png" alt=""></button>
+                </div>
+                <div class="main_top_btn">
+                    <span class="email_text"></span>
+                    <button class="btn_message">
+                        <img src="/public/message.png" width="30" alt="">
+                    </button>
+                    <button class="notify">
+                        <img src="/public/notify.png" width="30" alt="">
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="card_box">
-          <div class="item_card" id="one">
-            <div class="card_name">UzCard</div>
-            <div class="card_info">
-              <span class="balance">10000</span>
-              <span class="currency">SUM</span>
+
+        <section>
+            <div class="container">
+                <span class="page_name">Wallets</span>
+                <button class="add_wallet">+ Add Wallet</button>
+
+                <div class="contain">
+                    <div class="card_history">
+                        <div class="title_box">
+                            <span class="title_box">Card <p>History</p></span>
+                        </div>
+                    </div>
+
+                    <div class="card_stats">
+                        <div class="title_box">
+                            <span class="title">Card <p>Stats</p></span>
+                            <p class="month">month<img src="/public/arrow_down.svg" width="25px" alt=""></p>
+                        </div>
+                        <div class="card_details">
+                            <div class="details_box">
+                                <p>Income <img src="/public/arrow_green.png" width="20" alt=""></p>
+                                <span>$ 1240</span>
+                            </div>
+                            <div class="details_box">
+                                <p>Outcome <img src="/public/arrow_red.png" width="20" alt=""></p>
+                                <span>$ 240</span>
+                            </div>
+                            <div class="details_box">
+                                <p>Savings <img src="/public/arrow_green.png" width="20" alt=""></p>
+                                <span>$ 580</span>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+
+                    </div>
+                    <div class="my_cards">
+                        <span class="title">My <p>Cards</p></span>
+                        <div class="card_box">
+                            <div class="card active">
+                                <span>UzCard</span>
+                                <div class="balance_box">
+                                    <p>Balance</p>
+                                    <span>$ 1260</span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <span>VISA</span>
+                                <div class="balance_box">
+                                    <p>Balance</p>
+                                    <span>$ 1260</span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <span>HUMO</span>
+                                <div class="balance_box">
+                                    <p>Balance</p>
+                                    <span>$ 1260</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bg_anim"></div>
-          </div>
-          <div class="item_card" id="two">
-            <div class="card_name">HUMO</div>
-            <div class="card_info">
-              <span class="balance">10000</span>
-              <span class="currency">SUM</span>
+        </section>
+    </main>
+
+    <div class="black_bg">
+        <div class="r_u_sure">
+            <span>Are you sure?</span>
+            <div class="sure_btn">
+                <button class="yes">Yes</button>
+                <button class="no">No</button>
             </div>
-            <div class="bg_anim"></div>
-          </div>
-          <div class="item_card" id="three">
-            <div class="card_name">HUMO</div>
-            <div class="card_info">
-              <span class="balance">10000</span>
-              <span class="currency">SUM</span>
-            </div>
-            <div class="bg_anim"></div>
-          </div>
-          <div class="item_card" id="four">
-            <div class="card_name">HUMO</div>
-            <div class="card_info">
-              <span class="balance">10000</span>
-              <span class="currency">SUM</span>
-            </div>
-            <div class="bg_anim"></div>
-          </div>
-          <div class="item_card" id="five">
-            <div class="card_name">HUMO</div>
-            <div class="card_info">
-              <span class="balance">10000</span>
-              <span class="currency">SUM</span>
-            </div>
-            <div class="bg_anim"></div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-  </main>
 
-  <div class="black_bg">
-    <div class="r_u_sure">
-      <span>Are you sure?</span>
-      <div class="sure_btn">
-        <button class="yes">Yes</button>
-        <button class="no">No</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="bg_add_wallet">
-    <div class="add_wallet_modal">
-      <span>Add Wallet</span>
-      <form name="add_wallet">
-        <input type="text" name="name" placeholder="Name">
-        <select name="currency" id="currency">
-          <option value="RUB">RUB</option>
-          <option value="USD">USD</option>
-          <option value="SUM">SUM</option>
-        </select>
-        <input type="number" name="balance" id="balance">
-        <div class="add_wallet_btns">
-          <button class="cancel">Cancel</button>
-          <button class="add">Add wallet</button>  
+    <div class="bg_add_wallet">
+        <div class="add_wallet_modal">
+            <span>Add Wallet</span>
+            <form name="add_wallet">
+                <input type="text" name="name" placeholder="Name">
+                <select name="currency" id="currency">
+                    <option value="RUB">RUB</option>
+                    <option value="USD">USD</option>
+                    <option value="SUM">SUM</option>
+                </select>
+                <input type="number" name="balance" id="balance">
+                <div class="add_wallet_btns">
+                    <button class="cancel">Cancel</button>
+                    <button class="add">Add wallet</button>
+                </div>
+            </form>
+            <button class="close_btn"><img src="/public/close_icon.svg" alt=""></button>
         </div>
-      </form>
-      <button class="close_btn"><img src="/public/close_icon.svg" alt=""></button>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script type="module" src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="/modules/chart.js"></script>
 </body>
+
 </html>

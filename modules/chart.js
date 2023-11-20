@@ -1,5 +1,5 @@
 const chartData = {
-  labels: ["BitCoin", "Ethereum", "Dash"],
+  labels: ["Other", "Food", "Transport"],
   data: [64, 18, 18]
 }
 
@@ -31,7 +31,7 @@ const doughnutChart = document.getElementById('myChart');
 
   const lineChart = document.getElementById('lineChart');
   new Chart(lineChart, {
-    type: "line",
+    type: "bar",
     data: {
       labels: chartData.labels,
       datasets: [
@@ -44,7 +44,6 @@ const doughnutChart = document.getElementById('myChart');
     options: {
       borderWidth: false,
       hoverBorderWidth: 2,
-      borderWidth: 1,
       borderColor: "grey",
       pointBorderColor: "white",
       pointRadius: 5,
