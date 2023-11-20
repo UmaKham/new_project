@@ -164,133 +164,102 @@ body{
         font-size: 18px;
         font-weight: bold;
       }
-      .add_wallet{
-        background: linear-gradient(135deg, #2D317A, #2a314c);
-        color: white;
-        border-radius: 5px;
-        border: none;
-        font-family: sans-serif;
-        font-size: 14px;
-        font-weight: bold;
-        padding: 5px 15px;
-        margin-left: 20px;
-        cursor: pointer;
-      }
       .contain{
         display: flex;
-        .card_history{
+        flex-direction: column;
+        .card_box{
+          padding: 20px 0;
           width: 100%;
           height: 100%;
-          .title_box{
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            color: #616A8B;
-            .title{
-              display: flex;
-              gap: 10px;
-              p{
-                font-weight: 400;
-              }
-            }
-          }
-        }
-        .card_stats{
-          width: 100%;
-          height: 100%;
-          padding: 0 20px;
-          font-size: 30px;
-          .title_box{
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            color: #616A8B;
-            .month{
-              font-weight: 400;
-              font-size: 15px;
-              display: flex;
-              align-items: center;
-            }
-            .title{
-              display: flex;
-              gap: 10px;
-              p{
-                font-weight: 400;
-              }
-            }
-          }
-          .card_details{
-            display: flex;
-            gap: 20px;
-            padding: 40px 0;
-            .details_box{
-            width: 33%;
-            height: 100px;
-            background: linear-gradient(45deg, rgba(115, 115, 191, 0.5), rgba(52, 0, 75, 0.5));
-            box-shadow: 0 0 5px #616A8B;
-            padding: 10px;
-            font-size: 20px;
-            border-radius: 12px;
+          display: flex;
+          gap: 20px;
+          .card{
+            padding: 20px;
+            width: 100%;
+            height: 180px;
+            background-color: #2D317A;
+            border-radius: 15px;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            color: rgba(255, 255, 255, 0.5);
-              span{
-                font-size: 25px;
-              }
+            justify-content: space-between;
+            color: #616A8B;
+            span{
+              font-size: 25px;
+            }
+            p{
+              font-size: 15px;
             }
           }
-        }
-        .my_cards{
-          display: flex;
-          flex-direction: column;
-          align-items: end;
-          width: 100%;
-          height: 100%;
-          .title{
+          .main_card{
+            padding: 15px;
             display: flex;
             justify-content: center;
-            align-items: end;
-            gap: 5px;
-            font-weight: bold;
-            font-size: 30px;
-            padding: 0 30px 15px;
-            color: #616A8B;
-            p{
-              font-weight: 400;
-            }
-          }
-          .card_box{
-            display: flex;
-            align-items: end;
-            flex-direction: column;
+            align-items: center;
+            flex-direction: row;
             gap: 20px;
-            padding: 20px 20px;
-            .card{
-              width: 240px;
-              box-shadow: 0 0 5px black;
-              border-radius: 8px;
-              padding: 20px;
+            background: linear-gradient(180deg, rgba(27, 18, 78, 0.20) 0%, #0F0B38 93.37%);
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+            p{
+              color: #616A8B;
+              font-size: 20px;
+            }
+            canvas{
+              width: 100px !important;
+              height: 100px !important;
+            }
+            .percentage{
               display: flex;
               flex-direction: column;
-              justify-content: space-between;
-              font-weight: bold;
-              color: rgba(255, 255, 255, 0.5);
-              cursor: pointer;
-              height: 140px;
-              background: linear-gradient(45deg, darkviolet, darkblue);
-              span{
-                font-size: 30px;
-                p{
-                  font-weight: 400;
-                }
+              gap: 10px;
+            }
+          }
+          #one{
+            background: linear-gradient(45deg, #0F0B38, #604392);
+          }
+          #two{
+            background: linear-gradient(45deg, #0F0B38, #6162D6);
+          }
+          #three{
+            background: linear-gradient(45deg, #0F0B38, #469123);
+          }
+        }
+        .details{
+          width: 100%;
+          height: 360px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          .chart{
+            width: 100%;
+            height: 100%;
+          }
+          .transaction{
+            width: 100%;
+            height: 100%;
+            padding: 20px 20px;
+            background: linear-gradient(45deg, #1B124E33, #0F0B38);
+            .transact_title{
+              color: white;
+              hr{
+                margin: 20px 0;
               }
             }
-            .active{
-              width: 300px;
-              height: 170px;
-              box-shadow: 0 0 20px rgba(255, 217, 255, 0.5);
+            .transact_box{
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              .transact_item{
+                display: flex;
+                justify-content: space-between;
+                color: #616A8B;
+                .item_left{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 20px;
+                }
+              }
             }
           }
         }

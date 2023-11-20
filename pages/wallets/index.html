@@ -81,65 +81,90 @@
         <section>
             <div class="container">
                 <span class="page_name">Wallets</span>
-                <button class="add_wallet">+ Add Wallet</button>
 
                 <div class="contain">
-                    <div class="card_history">
-                        <div class="title_box">
-                            <span class="title_box">Card <p>History</p></span>
+                    <div class="card_box">
+                        <div class="card main_card">
+                            <canvas id="myChart"></canvas>
+                            <div class="percentage">
+                                <p>○ VISA</p>
+                                <p>○ Tinkoff</p>
+                                <p>○ MasterCard</p>
+                            </div>
+                        </div>
+                        <div class="card" id="one">
+                            <span>VISA</span>
+                            <div class="balance">
+                                <p>Balance: USD</p>
+                                <span>12000,00</span>
+                            </div>
+                        </div>
+                        <div class="card" id="two">
+                            <span>Tinkoff</span>
+                            <div class="balance">
+                                <p>Balance: RUB</p>
+                                <span>129000,00</span>
+                            </div>
+                        </div>
+                        <div class="card" id="three">
+                            <span>MasterCard</span>
+                            <div class="balance">
+                                <p>Balance: EURO</p>
+                                <span>11000,00</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="card_stats">
-                        <div class="title_box">
-                            <span class="title">Card <p>Stats</p></span>
-                            <p class="month">month<img src="/public/arrow_down.svg" width="25px" alt=""></p>
-                        </div>
-                        <div class="card_details">
-                            <div class="details_box">
-                                <p>Income <img src="/public/arrow_green.png" width="20" alt=""></p>
-                                <span>$ 1240</span>
-                            </div>
-                            <div class="details_box">
-                                <p>Outcome <img src="/public/arrow_red.png" width="20" alt=""></p>
-                                <span>$ 240</span>
-                            </div>
-                            <div class="details_box">
-                                <p>Savings <img src="/public/arrow_green.png" width="20" alt=""></p>
-                                <span>$ 580</span>
-                            </div>
-                        </div>
+                    <div class="details">
                         <div class="chart">
                             <canvas id="lineChart"></canvas>
                         </div>
+                        <div class="transaction">
+                            <div class="transact_title">
+                                <span>RECENT TRANSACTIONS</span>
+                                <hr>
+                            </div>
+                            <div class="transact_box">
+                                <div class="transact_item">
+                                    <div class="item_left">
+                                        <p class="time">AM 01:16</p>
+                                        <img src="/public/arrow_red.png" width="20" alt="">
+                                        <p class="description">Transport taxi</p>
+                                    </div>
+                                    <p class="total">- 800</p>
+                                </div>
 
-                    </div>
-                    <div class="my_cards">
-                        <span class="title">My <p>Cards</p></span>
-                        <div class="card_box">
-                            <div class="card active">
-                                <span>UzCard</span>
-                                <div class="balance_box">
-                                    <p>Balance</p>
-                                    <span>$ 1260</span>
+                                <div class="transact_item">
+                                    <div class="item_left">
+                                        <p class="time">AM 01:16</p>
+                                        <img src="/public/arrow_green.png" width="20" alt="">
+                                        <p class="description">Salary</p>
+                                    </div>
+                                    <p class="total">+ 55,200</p>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <span>VISA</span>
-                                <div class="balance_box">
-                                    <p>Balance</p>
-                                    <span>$ 1260</span>
+
+                                <div class="transact_item">
+                                    <div class="item_left">
+                                        <p class="time">AM 01:16</p>
+                                        <img src="/public/arrow_green.png" width="20" alt="">
+                                        <p class="description">Trade outlets</p>
+                                    </div>
+                                    <p class="total">+ 5,400</p>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <span>HUMO</span>
-                                <div class="balance_box">
-                                    <p>Balance</p>
-                                    <span>$ 1260</span>
+                                
+                                <div class="transact_item">
+                                    <div class="item_left">
+                                        <p class="time">AM 01:16</p>
+                                        <img src="/public/arrow_red.png" width="20" alt="">
+                                        <p class="description">Mc'Donalds</p>
+                                    </div>
+                                    <p class="total">- 1,200</p>
                                 </div>
+                            
                             </div>
                         </div>
                     </div>
+                
                 </div>
             </div>
         </section>
